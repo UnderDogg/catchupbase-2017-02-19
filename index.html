@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Innovate E-commerce Framework by mikimaine</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">Innovate E-commerce Framework</h1>
+      <h2 class="project-tagline">INNOVATE E-COMMERCE FRAMEWORK</h2>
+      <a href="https://github.com/mikimaine/ecommerce" class="btn">View on GitHub</a>
+      <a href="https://github.com/mikimaine/ecommerce/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/mikimaine/ecommerce/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
+
+    <section class="main-content">
+      <p><a href="https://styleci.io/repos/48767861"><img src="https://styleci.io/repos/48767861/shield?branch=master" alt="StyleCI"></a></p>
+
+<h2>
+<a id="innovate-ecommerce-framework-currently-015" class="anchor" href="#innovate-ecommerce-framework-currently-015" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>INNOVATE Ecommerce Framework, Currently 0.1.5</h2>
+
+<h3>
+<a id="introduction" class="anchor" href="#introduction" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Introduction</h3>
+
+<p>INNOVATE Ecommerce provides you with an E-commerce framework on top of laravel framework.</p>
+
+<p>The package follows the FIG standards PSR-1, PSR-2, and PSR-4 to ensure a high level of interoperability between shared PHP code. At the moment the package is not unit tested, but is planned to be covered later down the road.</p>
+
+<h3>
+<a id="requirements" class="anchor" href="#requirements" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Requirements</h3>
+
+<hr>
+
+<ul>
+<li>You must have at list PHP 5.6 installed on your machine</li>
+<li>And also For now you have to install both git and composer on your system
+You will find <a href="https://getcomposer.org">Composer here</a> and
+              <a href="https://git-scm.com/">Git here</a>  then follow the instructions there to install on your specific machine</li>
+</ul>
+
+<h3>
+<a id="optional" class="anchor" href="#optional" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Optional</h3>
+
+<hr>
+
+<ul>
+<li>
+<p>If you want a better page load and overall improvement in speed , the Framework comes with redis implementation out of the box.
+You can get Redis from <a href="http://redis.io/">Redis Here</a> follow instruction there
+For windows users you also have Redis Desktop <a href="http://redisdesktop.com/download">redisdesktop here </a>
+remember you first have to install Redis to work with redis desktop</p>
+
+<p>Then you should set  CACHE_DRIVER on .env file to redis and 
+Fill this three with your redis info in .env file
+                                REDIS_HOST=127.0.0.1   &lt;--- change it if you are not on localhost
+                                REDIS_PASSWORD=
+                                REDIS_PORT=6379</p>
+</li>
+</ul>
+
+<h3>
+<a id="quick-installation" class="anchor" href="#quick-installation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Quick Installation</h3>
+
+<hr>
+
+<p>Begin by creating a new project using the composer create commande</p>
+
+<pre><code>composer create-project mikimaine/ecommerce yourprojectname
+</code></pre>
+
+<p>This will install all the required packages to your system including Laravel</p>
+
+<p>After that rename example.env to .env and fill your database credentials.</p>
+
+<p>Then use this commands to install the database tables and there seed data</p>
+
+<h4>
+<a id="generate-application-key" class="anchor" href="#generate-application-key" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Generate Application key</h4>
+
+<div class="highlight highlight-text-html-php"><pre><span class="pl-s1"><span class="pl-c1">php</span> <span class="pl-c1">innovate</span> <span class="pl-c1">key</span>:<span class="pl-c1">generate</span></span></pre></div>
+
+<h4>
+<a id="migration" class="anchor" href="#migration" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Migration</h4>
+
+<div class="highlight highlight-text-html-php"><pre><span class="pl-s1"> <span class="pl-c1">php</span> <span class="pl-c1">innovate</span> <span class="pl-c1">migrate</span></span></pre></div>
+
+<h4>
+<a id="seed-the-database" class="anchor" href="#seed-the-database" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Seed the database</h4>
+
+<div class="highlight highlight-text-html-php"><pre><span class="pl-s1"> <span class="pl-c1">php</span> <span class="pl-c1">innovate</span> <span class="pl-c1">db</span>:<span class="pl-c1">seed</span></span></pre></div>
+
+<p>And that's it ! Start building awesome E-commerce applications for your business</p>
+
+<h2>
+<a id="documentation" class="anchor" href="#documentation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Documentation</h2>
+
+<p>I will release a user friendly documentation and screen cast soon</p>
+
+<h3>
+<a id="issues" class="anchor" href="#issues" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Issues</h3>
+
+<p>If you come across any issues please <a href="https://github.com/mikimaine/ecommerce.git">report them here</a>.</p>
+
+<h3>
+<a id="contributing" class="anchor" href="#contributing" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Contributing</h3>
+
+<p>Thank you for considering contributing to the INNOVATE Ecommerce Framework project! Please feel free to make any pull requests, or e-mail me a feature request you would like to see in the future to Miki Maine at <a href="mailto:mikias.amdu@gmail.com">mikias.amdu@gmail.com</a>.</p>
+
+<h3>
+<a id="security-vulnerabilities" class="anchor" href="#security-vulnerabilities" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Security Vulnerabilities</h3>
+
+<p>If you discover a security vulnerability within this framework, please send an e-mail to Miki Maine at <a href="mailto:mikias.amdu@gmail.com">mikias.amdu@gmail.com</a>, or create a pull request if possible. All security vulnerabilities will be promptly addressed. </p>
+
+<h3>
+<a id="license" class="anchor" href="#license" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>License</h3>
+
+<p>The INNOVATE Ecommerce framework is open-sourced software licensed under the MIT license</p>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/mikimaine/ecommerce">Innovate E-commerce Framework</a> is maintained by <a href="https://github.com/mikimaine">mikimaine</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
+  </body>
+</html>
