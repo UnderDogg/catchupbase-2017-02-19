@@ -67,7 +67,7 @@ class PasswordController extends Controller
         $user = User::where('email', $request->get('email'))->first();
 
         if ($user) {
-            if ($user->confirmed == 0) {
+            if ($user->isconfirmed == 0) {
                 throw new GeneralException('Your account is not confirmed. Please click the confirmation link in your e-mail, or ' . '<a href="' . route('account.confirm.resend', $user->id) . '">click here</a>' . ' to resend the confirmation e-mail.');
             }
         } else {

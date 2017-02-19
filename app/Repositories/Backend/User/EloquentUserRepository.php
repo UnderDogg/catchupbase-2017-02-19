@@ -115,7 +115,7 @@ class EloquentUserRepository implements UserContract
             $user->attachPermissions($permissions['permission_user']);
 
             //Send confirmation email if requested
-            if (isset($input['confirmation_email']) && $user->confirmed == 0) {
+            if (isset($input['confirmation_email']) && $user->isconfirmed == 0) {
                 $this->auth->resendConfirmationEmail($user->id);
             }
 
@@ -142,7 +142,7 @@ class EloquentUserRepository implements UserContract
         if ($user->update($input)) {
             //For whatever reason this just wont work in the above call, so a second is needed for now
             $user->status = isset($input['status']) ? 1 : 0;
-            $user->confirmed = isset($input['confirmed']) ? 1 : 0;
+            $user->isconfirmed = isset($input['confirmed']) ? 1 : 0;
             $user->save();
 
             $this->checkUserRolesCount($roles);
@@ -356,7 +356,7 @@ class EloquentUserRepository implements UserContract
         $user->password = $input['password'];
         $user->status = isset($input['status']) ? 1 : 0;
         $user->confirmation_code = md5(uniqid(mt_rand(), true));
-        $user->confirmed = isset($input['confirmed']) ? 1 : 0;
+        $user->isconfirmed = isset($input['confirmed']) ? 1 : 0;
 
         return $user;
     }

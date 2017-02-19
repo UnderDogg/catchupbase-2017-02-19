@@ -252,12 +252,12 @@ class EloquentUserRepository implements UserContract
         $user = User::where('confirmation_code', $token)->first();
 
         if ($user) {
-            if ($user->confirmed == 1) {
+            if ($user->isconfirmed == 1) {
                 throw new GeneralException('Your account is already confirmed.');
             }
 
             if ($user->confirmation_code == $token) {
-                $user->confirmed = 1;
+                $user->isconfirmed = 1;
 
                 return $user->save();
             }
