@@ -6,7 +6,7 @@ return [
      * Users table used to store users
      */
     'users_table' => 'users',
-
+    'staff_table' => 'users',
     /*
      * Role model used by Access to create correct relations. Update the role if it is in a different namespace.
     */
@@ -49,7 +49,7 @@ return [
      * This table is only for permissions that belong directly to a specific user and not a role
      */
     'permission_user_table' => 'permission_user',
-
+    'permission_staff_table' => 'permission_user',
     /*
      * Table that specifies if one permission is dependent on another.
      * For example in order for a user to have the edit-user permission they also need the view-backend permission.
@@ -86,6 +86,31 @@ return [
          */
         'change_email' => false,
     ],
+
+
+    'staff' => [
+        /*
+         * Administration tables
+         */
+        'default_per_page' => 25,
+
+        /*
+         * The role the user is assigned to when they sign up from the frontend, not namespaced
+         */
+        'default_role' => 'Manager',
+        //'default_role' => 2,
+
+        /*
+         * Whether or not the user has to confirm their email when signing up
+         */
+        'confirm_email' => true,
+
+        /*
+         * Whether or not the users email can be changed on the edit profile screen
+         */
+        'change_email' => true,
+    ],
+
 
     /*
      * Configuration for roles

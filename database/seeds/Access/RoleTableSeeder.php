@@ -24,6 +24,7 @@ class RoleTableSeeder extends Seeder
         //Create admin role, id of 1
         $role_model = config('access.role');
         $admin = new $role_model();
+        $admin->id = 99;
         $admin->name = 'Administrator';
         $admin->all = true;
         $admin->sort = 1;
@@ -31,9 +32,31 @@ class RoleTableSeeder extends Seeder
         $admin->updated_at = Carbon::now();
         $admin->save();
 
+        $role_model = config('access.role');
+        $admin = new $role_model();
+        $admin->id = 98;
+        $admin->name = 'Manager';
+        $admin->all = true;
+        $admin->sort = 1;
+        $admin->created_at = Carbon::now();
+        $admin->updated_at = Carbon::now();
+        $admin->save();
+
+        $role_model = config('access.role');
+        $admin = new $role_model();
+        $admin->id = 97;
+        $admin->name = 'TeamLeader';
+        $admin->all = true;
+        $admin->sort = 1;
+        $admin->created_at = Carbon::now();
+        $admin->updated_at = Carbon::now();
+        $admin->save();
+
+
         //id = 2
         $role_model = config('access.role');
         $user = new $role_model();
+        $user->id = 10;
         $user->name = 'User';
         $user->sort = 2;
         $user->created_at = Carbon::now();
