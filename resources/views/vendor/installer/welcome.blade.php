@@ -1,6 +1,6 @@
 @extends('vendor.installer.layouts.master')
 
-@section('title', trans('messages.welcome.title'))
+@section('title', "installer welcome?")
 @section('container')
     <p class="paragraph">{{ trans('messages.welcome.message') }}</p>
     <div class="buttons">

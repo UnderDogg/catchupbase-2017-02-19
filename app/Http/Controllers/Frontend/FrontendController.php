@@ -11,22 +11,15 @@ use Theme;
  */
 class FrontendController extends Controller
 {
+    public $theme = 'bootstrap';
+
     /**
      * @return \Illuminate\View\View
      */
     public function index()
     {
-        Activity::log('User Arrived At the home page');
-        $theme = Theme::uses('default')->layout('default');
-
-        $view = array(
-            'name' => 'Teepluss'
-        );
-
-
-        return $theme->of('frontend.index', $view)->render();
-
-        //return Theme::view('frontend.index');
+        //Themify::set('bartheme');
+        return view('frontend.index');
     }
 
     /**

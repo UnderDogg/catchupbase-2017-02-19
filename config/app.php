@@ -220,7 +220,7 @@ return [
         //Spatie\Feed\FeedServiceProvider::class,
         //	Spatie\Tail\TailServiceProvider::class,
         //Devio\Eavquent\EavquentServiceProvider::class,
-
+        'Nwidart\Themify\ThemifyServiceProvider',
 
     ],
 
@@ -290,7 +290,7 @@ return [
         //'Demo' 		=> Mikimaine\Demo\DemoFacade::class,
         'Module' => Caffeinated\Modules\Facades\Module::class,
         //'Theme' => Caffeinated\Themes\Facades\Theme::class,
-        'Theme' => Teepluss\Theme\Facades\Theme::class,
+        'Themify'         => 'Nwidart\Themify\Facades\Themify',
 
         'Component' => Caffeinated\Themes\Facades\Component::class,
 
