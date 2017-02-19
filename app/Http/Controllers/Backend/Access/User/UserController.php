@@ -40,8 +40,8 @@ class UserController extends Controller
     protected $permissions;
 
     /**
-     * @param UserContract                 $users
-     * @param RoleRepositoryContract       $roles
+     * @param UserContract $users
+     * @param RoleRepositoryContract $roles
      * @param PermissionRepositoryContract $permissions
      */
     public function __construct(UserContract $users, RoleRepositoryContract $roles, PermissionRepositoryContract $permissions)
@@ -230,7 +230,7 @@ class UserController extends Controller
 
     /**
      * @param  $user_id
-     * @param AuthenticationContract         $auth
+     * @param AuthenticationContract $auth
      * @param ResendConfirmationEmailRequest $request
      *
      * @return mixed

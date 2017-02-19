@@ -21,7 +21,7 @@ class ProfileController extends Controller
     }
 
     /**
-     * @param UserContract         $user
+     * @param UserContract $user
      * @param UpdateProfileRequest $request
      *
      * @return mixed

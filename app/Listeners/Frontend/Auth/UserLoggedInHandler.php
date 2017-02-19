@@ -32,6 +32,6 @@ class UserLoggedInHandler implements ShouldQueue
      */
     public function handle(UserLoggedIn $event)
     {
-        \Log::info('User Logged In: '.$event->user->name);
+        \Log::info('User Logged In: ' . $event->user->name);
     }
 }

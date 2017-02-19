@@ -11,6 +11,6 @@
 
 @section('content')
     {!! Form::open(['route' => 'admin.tax.store', 'class' => 'form-horizontal', 'role' => 'form', 'method' => 'post']) !!}
-        @include('backend.tax.includes.partials._form',[$pageName = 'create',$buttonText = trans('strings.save_button') ])
+    @include('backend.tax.includes.partials._form',[$pageName = 'create',$buttonText = trans('strings.save_button') ])
     {!! Form::close() !!}
 @endsection

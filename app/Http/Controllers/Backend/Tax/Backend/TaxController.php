@@ -31,7 +31,7 @@ class TaxController extends Controller
     public function index()
     {
         return view('backend.tax.tax')
-                ->withTaxs($this->tax->getPaginated(config('access.users.default_per_page')));
+            ->withTaxs($this->tax->getPaginated(config('access.users.default_per_page')));
     }
 
     /**
@@ -62,7 +62,7 @@ class TaxController extends Controller
         $tax = $this->tax->findOrThrowException($id, true);
 
         return view('backend.tax.edit')
-               ->withTax($tax);
+            ->withTax($tax);
     }
 
     /**

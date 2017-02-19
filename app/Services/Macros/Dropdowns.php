@@ -11,7 +11,7 @@ trait Dropdowns
      * Use this to set the default country state type for the shorthand method.
      *
      * @param  $name
-     * @param null  $selected
+     * @param null $selected
      * @param array $options
      *
      * @return string
@@ -23,7 +23,7 @@ trait Dropdowns
 
     /**
      * @param  $name
-     * @param null  $selected
+     * @param null $selected
      * @param array $options
      *
      * @return string
@@ -31,7 +31,7 @@ trait Dropdowns
     public function selectStateUS($name, $selected = null, $options = [])
     {
         $list = [
-            ''   => 'Select One...',
+            '' => 'Select One...',
             'AL' => 'Alabama',
             'AK' => 'Alaska',
             'AZ' => 'Arizona',
@@ -90,7 +90,7 @@ trait Dropdowns
 
     /**
      * @param  $name
-     * @param null  $selected
+     * @param null $selected
      * @param array $options
      *
      * @return mixed
@@ -98,7 +98,7 @@ trait Dropdowns
     public function selectStateUSOutlyingTerritories($name, $selected = null, $options = [])
     {
         $list = [
-            ''   => 'Select One...',
+            '' => 'Select One...',
             'AS' => 'American Samoa',
             'GU' => 'Guam',
             'MP' => 'Northern Mariana Islands',
@@ -112,7 +112,7 @@ trait Dropdowns
 
     /**
      * @param  $name
-     * @param null  $selected
+     * @param null $selected
      * @param array $options
      *
      * @return mixed
@@ -120,7 +120,7 @@ trait Dropdowns
     public function selectStateUSArmedForces($name, $selected = null, $options = [])
     {
         $list = [
-            ''   => 'Select One...',
+            '' => 'Select One...',
             'AA' => 'Armed Forces Americas',
             'AP' => 'Armed Forces Pacific',
             'AE' => 'Armed Forces Others',
@@ -131,7 +131,7 @@ trait Dropdowns
 
     /**
      * @param  $name
-     * @param null  $selected
+     * @param null $selected
      * @param array $options
      *
      * @return mixed
@@ -139,7 +139,7 @@ trait Dropdowns
     public function selectCanadaTerritories($name, $selected = null, $options = [])
     {
         $list = [
-            ''   => 'Select One...',
+            '' => 'Select One...',
             'AB' => 'Alberta',
             'BC' => 'British Columbia',
             'MB' => 'Manitoba',
@@ -160,7 +160,7 @@ trait Dropdowns
 
     /**
      * @param  $name
-     * @param null  $selected
+     * @param null $selected
      * @param array $options
      *
      * @return mixed
@@ -168,7 +168,7 @@ trait Dropdowns
     public function selectStateMexico($name, $selected = null, $options = [])
     {
         $list = [
-            ''    => 'Select One...',
+            '' => 'Select One...',
             'DIF' => 'Distrito Federal',
             'AGS' => 'Aguascalientes',
             'BCN' => 'Baja California',
@@ -210,7 +210,7 @@ trait Dropdowns
      * Use this to set the default country dropdown type for the shorthand method.
      *
      * @param  $name
-     * @param null  $selected
+     * @param null $selected
      * @param array $options
      *
      * @return string
@@ -222,7 +222,7 @@ trait Dropdowns
 
     /**
      * @param  $name
-     * @param null  $selected
+     * @param null $selected
      * @param array $options
      *
      * @return mixed
@@ -230,7 +230,7 @@ trait Dropdowns
     public function selectCountryAlpha($name, $selected = null, $options = [])
     {
         $list = [
-            ''              => 'Select One...',
+            '' => 'Select One...',
             'ISO 3166-2:AF' => 'Afghanistan',
             'ISO 3166-2:AX' => 'Åland Islands',
             'ISO 3166-2:AL' => 'Albania',
@@ -487,7 +487,7 @@ trait Dropdowns
 
     /**
      * @param  $name
-     * @param null  $selected
+     * @param null $selected
      * @param array $options
      *
      * @return string
@@ -495,7 +495,7 @@ trait Dropdowns
     public function selectCountryAlpha2($name, $selected = null, $options = [])
     {
         $list = [
-            ''   => 'Select One...',
+            '' => 'Select One...',
             'AF' => 'Afghanistan',
             'AX' => 'Aland Islands',
             'AL' => 'Albania',
@@ -747,7 +747,7 @@ trait Dropdowns
 
     /**
      * @param  $name
-     * @param null  $selected
+     * @param null $selected
      * @param array $options
      *
      * @return string
@@ -755,7 +755,7 @@ trait Dropdowns
     public function selectCountryAlpha3($name, $selected = null, $options = [])
     {
         $list = [
-            ''    => 'Select One...',
+            '' => 'Select One...',
             'AFG' => 'Afghanistan',
             'ALA' => 'Åland Islands',
             'ALB' => 'Albania',
@@ -1012,7 +1012,7 @@ trait Dropdowns
 
     /**
      * @param  $name
-     * @param null  $selected
+     * @param null $selected
      * @param array $options
      *
      * @return string
@@ -1020,41 +1020,41 @@ trait Dropdowns
     public function selectCountryNumeric($name, $selected = null, $options = [])
     {
         $list = [
-            ''    => 'Select One...',
-            '4'   => 'Afghanistan',
+            '' => 'Select One...',
+            '4' => 'Afghanistan',
             '248' => 'Åland Islands',
-            '8'   => 'Albania',
-            '12'  => 'Algeria',
-            '16'  => 'American Samoa',
-            '20'  => 'Andorra',
-            '24'  => 'Angola',
+            '8' => 'Albania',
+            '12' => 'Algeria',
+            '16' => 'American Samoa',
+            '20' => 'Andorra',
+            '24' => 'Angola',
             '660' => 'Anguilla',
-            '10'  => 'Antarctica',
-            '28'  => 'Antigua and Barbuda',
-            '32'  => 'Argentina',
-            '51'  => 'Armenia',
+            '10' => 'Antarctica',
+            '28' => 'Antigua and Barbuda',
+            '32' => 'Argentina',
+            '51' => 'Armenia',
             '533' => 'Aruba',
-            '36'  => 'Australia',
-            '40'  => 'Austria',
-            '31'  => 'Azerbaijan',
-            '44'  => 'Bahamas',
-            '48'  => 'Bahrain',
-            '50'  => 'Bangladesh',
-            '52'  => 'Barbados',
+            '36' => 'Australia',
+            '40' => 'Austria',
+            '31' => 'Azerbaijan',
+            '44' => 'Bahamas',
+            '48' => 'Bahrain',
+            '50' => 'Bangladesh',
+            '52' => 'Barbados',
             '112' => 'Belarus',
-            '56'  => 'Belgium',
-            '84'  => 'Belize',
+            '56' => 'Belgium',
+            '84' => 'Belize',
             '204' => 'Benin',
-            '60'  => 'Bermuda',
-            '64'  => 'Bhutan',
-            '68'  => 'Bolivia, Plurinational State of',
+            '60' => 'Bermuda',
+            '64' => 'Bhutan',
+            '68' => 'Bolivia, Plurinational State of',
             '535' => 'Bonaire, Sint Eustatius and Saba',
-            '70'  => 'Bosnia and Herzegovina',
-            '72'  => 'Botswana',
-            '74'  => 'Bouvet Island',
-            '76'  => 'Brazil',
-            '86'  => 'British Indian Ocean Territory',
-            '96'  => 'Brunei Darussalam',
+            '70' => 'Bosnia and Herzegovina',
+            '72' => 'Botswana',
+            '74' => 'Bouvet Island',
+            '76' => 'Brazil',
+            '86' => 'British Indian Ocean Territory',
+            '96' => 'Brunei Darussalam',
             '100' => 'Bulgaria',
             '854' => 'Burkina Faso',
             '108' => 'Burundi',
@@ -1224,7 +1224,7 @@ trait Dropdowns
             '534' => 'Sint Maarten (Dutch part)',
             '703' => 'Slovakia',
             '705' => 'Slovenia',
-            '90'  => 'Solomon Islands',
+            '90' => 'Solomon Islands',
             '706' => 'Somalia',
             '710' => 'South Africa',
             '239' => 'South Georgia and the South Sandwich Islands',
@@ -1263,7 +1263,7 @@ trait Dropdowns
             '548' => 'Vanuatu',
             '862' => 'Venezuela, Bolivarian Republic of',
             '704' => 'Viet Nam',
-            '92'  => 'Virgin Islands, British',
+            '92' => 'Virgin Islands, British',
             '850' => 'Virgin Islands, U.S.',
             '876' => 'Wallis and Futuna',
             '732' => 'Western Sahara',
@@ -1277,7 +1277,7 @@ trait Dropdowns
 
     /**
      * @param  $name
-     * @param null  $selected
+     * @param null $selected
      * @param array $options
      *
      * @return mixed
@@ -1294,7 +1294,7 @@ trait Dropdowns
             $transition = $current_tz->getTransitions($dt->getTimestamp(), $dt->getTimestamp());
             $abbr = $transition[0]['abbr'];
 
-            $list[$tz] = $tz.' ['.$abbr.' '.$this->formatOffset($offset).']';
+            $list[$tz] = $tz . ' [' . $abbr . ' ' . $this->formatOffset($offset) . ']';
         }
 
         return $this->select($name, $list, $selected, $options);
@@ -1310,13 +1310,13 @@ trait Dropdowns
         $hours = $offset / 3600;
         $remainder = $offset % 3600;
         $sign = $hours > 0 ? '+' : '-';
-        $hour = (int) abs($hours);
-        $minutes = (int) abs($remainder / 60);
+        $hour = (int)abs($hours);
+        $minutes = (int)abs($remainder / 60);
 
         if ($hour == 0 && $minutes == 0) {
             $sign = ' ';
         }
 
-        return $sign.str_pad($hour, 2, '0', STR_PAD_LEFT).':'.str_pad($minutes, 2, '0');
+        return $sign . str_pad($hour, 2, '0', STR_PAD_LEFT) . ':' . str_pad($minutes, 2, '0');
     }
 }

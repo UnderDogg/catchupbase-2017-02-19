@@ -33,8 +33,8 @@ class PermissionController extends Controller
     protected $groups;
 
     /**
-     * @param RoleRepositoryContract            $roles
-     * @param PermissionRepositoryContract      $permissions
+     * @param RoleRepositoryContract $roles
+     * @param PermissionRepositoryContract $permissions
      * @param PermissionGroupRepositoryContract $groups
      */
     public function __construct(RoleRepositoryContract $roles, PermissionRepositoryContract $permissions, PermissionGroupRepositoryContract $groups)

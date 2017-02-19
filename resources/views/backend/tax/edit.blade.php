@@ -11,7 +11,7 @@
 
 @section('content')
     {!! Form::model($tax,['route' => ['admin.tax.update',$tax->id], 'class' => 'form-horizontal', 'role' => 'form', 'method' => 'PATCH']) !!}
-              @include('backend.tax.includes.partials._form',[$pageName = 'update',$buttonText = trans('strings.update_button') ])
+    @include('backend.tax.includes.partials._form',[$pageName = 'update',$buttonText = trans('strings.update_button') ])
     {!! Form::close() !!}
 
 @endsection

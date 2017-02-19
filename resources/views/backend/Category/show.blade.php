@@ -14,19 +14,24 @@
 @section('content')
     <div class="row">
         <div class="col-md-3">
-        <div class="box box-primary">
-        <div class=" box-body box-profile ">
-            @if($category->image != 'default.jpg')
-            <img class="profile-user-img img-responsive img-rectangle" src="{!! config('app.url').'/app/innovate/product/'.$category->image !!} " alt=" {{ $category->category_description->name }}"/>
-            <a href=""><span class="label label-danger">Remove image  </span></a>
-            @else
-                <img class="profile-user-img img-responsive img-rectangle" src="{!! config('app.url').'/app/innovate/product/'.$category->image !!} " alt=" {{ $category->category_description->name }}"/>
+            <div class="box box-primary">
+                <div class=" box-body box-profile ">
+                    @if($category->image != 'default.jpg')
+                        <img class="profile-user-img img-responsive img-rectangle"
+                             src="{!! config('app.url').'/app/innovate/product/'.$category->image !!} "
+                             alt=" {{ $category->category_description->name }}"/>
+                        <a href=""><span class="label label-danger">Remove image  </span></a>
+                    @else
+                        <img class="profile-user-img img-responsive img-rectangle"
+                             src="{!! config('app.url').'/app/innovate/product/'.$category->image !!} "
+                             alt=" {{ $category->category_description->name }}"/>
 
-            @endif
+                    @endif
 
-            <h3 class="profile-username text-center">{{ $category->category_description->name }}</h3>
-            <a href="#" class="btn btn-danger btn-block" data-toggle="tooltip" data-placement="bottom" title="This will also delete all sub category's and products inside it !" ><b>Delete Catagory</b></a>
-        </div><!-- box-body box-profile-->
+                    <h3 class="profile-username text-center">{{ $category->category_description->name }}</h3>
+                    <a href="#" class="btn btn-danger btn-block" data-toggle="tooltip" data-placement="bottom"
+                       title="This will also delete all sub category's and products inside it !"><b>Delete Catagory</b></a>
+                </div><!-- box-body box-profile-->
 
             </div>
 
@@ -52,7 +57,8 @@
 
             <div class="nav-tabs-custom">
                 <ul class="nav nav-tabs">
-                    <li class="active"><a aria-expanded="true" href="#activity" data-toggle="tab">General Information</a></li>
+                    <li class="active"><a aria-expanded="true" href="#activity" data-toggle="tab">General
+                            Information</a></li>
                     <li class=""><a aria-expanded="false" href="#timeline" data-toggle="tab">Category Products</a></li>
                 </ul>
                 <div class="tab-content">

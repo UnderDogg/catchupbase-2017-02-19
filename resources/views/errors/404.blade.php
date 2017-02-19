@@ -53,8 +53,8 @@
     </style>
 </head>
 <body>
-    <h1>{{ trans('strings.page_not_found') }}</h1>
-    <p>{{ trans('strings.sorry_page_you_were_trying') }}</p>
+<h1>{{ trans('strings.page_not_found') }}</h1>
+<p>{{ trans('strings.sorry_page_you_were_trying') }}</p>
 </body>
 </html>
 <!-- IE needs 512+ bytes: http://blogs.msdn.com/b/ieinternals/archive/2010/08/19/http-error-pages-in-internet-explorer.aspx -->

@@ -29,8 +29,8 @@ class EloquentAuthenticationRepository implements AuthenticationContract
     private $users;
 
     /**
-     * @param Socialite    $socialite
-     * @param Guard        $auth
+     * @param Socialite $socialite
+     * @param Guard $auth
      * @param UserContract $users
      */
     public function __construct(Socialite $socialite, Guard $auth, UserContract $users)
@@ -67,7 +67,7 @@ class EloquentAuthenticationRepository implements AuthenticationContract
             if ($this->auth->user()->confirmed == 0) {
                 $user_id = $this->auth->user()->id;
                 $this->auth->logout();
-                throw new GeneralException('Your account is not confirmed. Please click the confirmation link in your e-mail, or '.'<a href="'.route('account.confirm.resend', $user_id).'">click here</a>'.' to resend the confirmation e-mail.');
+                throw new GeneralException('Your account is not confirmed. Please click the confirmation link in your e-mail, or ' . '<a href="' . route('account.confirm.resend', $user_id) . '">click here</a>' . ' to resend the confirmation e-mail.');
             }
 
             event(new UserLoggedIn($this->auth->user()));

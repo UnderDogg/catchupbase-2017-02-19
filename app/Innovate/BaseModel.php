@@ -26,19 +26,19 @@ class BaseModel extends Model
         $grammar = $conn->getQueryGrammar();
 
 
-/*
-        if (env('LADA_CACHE_DRIVER')) {
-            $query = new QueryBuilder(
-
-                $conn,
-                $grammar,
-                $conn->getPostProcessor(),
-                app()->make('lada.handler')
-            );
-
-            return $query;
-        } else {*/
-            return parent::newBaseQueryBuilder();
+        /*
+                if (env('LADA_CACHE_DRIVER')) {
+                    $query = new QueryBuilder(
+        
+                        $conn,
+                        $grammar,
+                        $conn->getPostProcessor(),
+                        app()->make('lada.handler')
+                    );
+        
+                    return $query;
+                } else {*/
+        return parent::newBaseQueryBuilder();
         //}
     }
 }

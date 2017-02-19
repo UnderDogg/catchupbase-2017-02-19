@@ -33,6 +33,6 @@ class Maker extends Command
      */
     public function handle()
     {
-        $this->comment(PHP_EOL.'This INNOVATE  E-COMMERCE FRAMEWORK is created by  MIKI MAINE AMDU -- mikias.amdu@gmail.com'.PHP_EOL);
+        $this->comment(PHP_EOL . 'This INNOVATE  E-COMMERCE FRAMEWORK is created by  MIKI MAINE AMDU -- mikias.amdu@gmail.com' . PHP_EOL);
     }
 }

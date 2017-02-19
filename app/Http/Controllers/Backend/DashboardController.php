@@ -16,6 +16,6 @@ class DashboardController extends Controller
     public function index()
     {
         return view('backend.dashboard')
-               ->withActivities(Activity::with('user')->latest()->limit(100)->get());
+            ->withActivities(Activity::with('user')->latest()->limit(100)->get());
     }
 }

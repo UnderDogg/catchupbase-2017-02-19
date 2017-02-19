@@ -65,11 +65,19 @@
                                 <td class="visible-lg">{!! $user->updated_at->diffForHumans() !!}</td>
                                 <td>
                                     @permission('undelete-users')
-                                    <a href="{{route('admin.access.user.restore', $user->id)}}" class="btn btn-xs btn-success" name="restore_user"><i class="fa fa-refresh" data-toggle="tooltip" data-placement="top" title="{{ trans('crud.users.restore_user') }}"></i></a>
+                                    <a href="{{route('admin.access.user.restore', $user->id)}}"
+                                       class="btn btn-xs btn-success" name="restore_user"><i class="fa fa-refresh"
+                                                                                             data-toggle="tooltip"
+                                                                                             data-placement="top"
+                                                                                             title="{{ trans('crud.users.restore_user') }}"></i></a>
                                     @endauth
 
                                     @permission('permanently-delete-users')
-                                    <a href="{{route('admin.access.user.delete-permanently', $user->id)}}" class="btn btn-xs btn-danger" name="delete_user_perm"><i class="fa fa-times" data-toggle="tooltip" data-placement="top" title="{{ trans('crud.users.delete_permanently') }}"></i></a>
+                                    <a href="{{route('admin.access.user.delete-permanently', $user->id)}}"
+                                       class="btn btn-xs btn-danger" name="delete_user_perm"><i class="fa fa-times"
+                                                                                                data-toggle="tooltip"
+                                                                                                data-placement="top"
+                                                                                                title="{{ trans('crud.users.delete_permanently') }}"></i></a>
                                     @endauth
                                 </td>
                             </tr>
@@ -95,19 +103,19 @@
 @stop
 
 @section('after-scripts-end')
-	<script>
-		$(function() {
+    <script>
+        $(function () {
             @permission('permanently-delete-users')
-                $("a[name='delete_user_perm']").click(function() {
-                    return confirm("Are you sure you want to delete this user permanently? Anywhere in the application that references this user's id will most likely error. Proceed at your own risk. This can not be un-done.");
-                });
+                $("a[name='delete_user_perm']").click(function () {
+                return confirm("Are you sure you want to delete this user permanently? Anywhere in the application that references this user's id will most likely error. Proceed at your own risk. This can not be un-done.");
+            });
             @endauth
 
             @permission('undelete-users')
-                $("a[name='restore_user']").click(function() {
-                    return confirm("Restore this user to its original state?");
-                });
+                $("a[name='restore_user']").click(function () {
+                return confirm("Restore this user to its original state?");
+            });
             @endauth
-		});
-	</script>
+        });
+    </script>
 @stop

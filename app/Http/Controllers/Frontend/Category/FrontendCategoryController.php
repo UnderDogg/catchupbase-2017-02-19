@@ -34,7 +34,7 @@ class FrontendCategoryController extends Controller
     public $imageDriver;
 
     /**
-     * @param CategoryContract            $categoryContract
+     * @param CategoryContract $categoryContract
      * @param InnovateImageUploadContract $image
      */
     public function __construct(CategoryContract $categoryContract, InnovateImageUploadContract $image)
@@ -84,7 +84,7 @@ class FrontendCategoryController extends Controller
                 throw new GeneralException('There is error in your image file.');
             }
             //pass the image along with the path to the upload to the imageDriver for further processing
-            $im = $this->imageDriver->up($file, config('innovate.upload_path').DS.'product'.DS.Str::random(32).'.'.$file->guessExtension());
+            $im = $this->imageDriver->up($file, config('innovate.upload_path') . DS . 'product' . DS . Str::random(32) . '.' . $file->guessExtension());
             $all = $request->all();
             $all['valid_image'] = $im->basename;
             $this->category->create($all);
@@ -98,7 +98,7 @@ class FrontendCategoryController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param int                  $id
+     * @param int $id
      * @param CategorySEOGenerator $seo
      *
      * @return \Illuminate\Http\Response
@@ -128,7 +128,7 @@ class FrontendCategoryController extends Controller
      * Update the specified resource in storage.
      *
      * @param Request $request
-     * @param int     $id
+     * @param int $id
      *
      * @return \Illuminate\Http\Response
      */

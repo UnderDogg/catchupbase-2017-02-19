@@ -28,7 +28,7 @@ class RoleController extends Controller
     protected $permissions;
 
     /**
-     * @param RoleRepositoryContract       $roles
+     * @param RoleRepositoryContract $roles
      * @param PermissionRepositoryContract $permissions
      */
     public function __construct(RoleRepositoryContract $roles, PermissionRepositoryContract $permissions)
@@ -48,7 +48,7 @@ class RoleController extends Controller
 
     /**
      * @param PermissionGroupRepositoryContract $group
-     * @param CreateRoleRequest                 $request
+     * @param CreateRoleRequest $request
      *
      * @return mixed
      */
@@ -74,7 +74,7 @@ class RoleController extends Controller
     /**
      * @param  $id
      * @param PermissionGroupRepositoryContract $group
-     * @param EditRoleRequest                   $request
+     * @param EditRoleRequest $request
      *
      * @return mixed
      */

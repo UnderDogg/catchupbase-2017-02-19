@@ -19,10 +19,10 @@ use Innovate\BaseModel;
 class User extends BaseModel implements AuthenticatableContract, CanResetPasswordContract
 {
     use Authenticatable,
-    CanResetPassword,
-    SoftDeletes,
-    UserAccess,
-    UserRelationship,
+        CanResetPassword,
+        SoftDeletes,
+        UserAccess,
+        UserRelationship,
         UserAttribute;
 
     /**

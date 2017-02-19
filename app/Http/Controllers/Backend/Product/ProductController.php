@@ -60,11 +60,11 @@ class ProductController extends CommandsDomainEventController
     public $imageDriver;
 
     /**
-     * @param ProductContract             $productContract
-     * @param CategoryContract            $categoryContract
-     * @param EavCategoryContract         $eavCategoryContract
-     * @param EavAttributeContract        $attributeContract
-     * @param TaxContract                 $taxContract
+     * @param ProductContract $productContract
+     * @param CategoryContract $categoryContract
+     * @param EavCategoryContract $eavCategoryContract
+     * @param EavAttributeContract $attributeContract
+     * @param TaxContract $taxContract
      * @param InnovateImageUploadContract $image
      */
     public function __construct(ProductContract $productContract, CategoryContract $categoryContract,
@@ -137,7 +137,7 @@ class ProductController extends CommandsDomainEventController
     }
 
     /**
-     * @param Request    $request
+     * @param Request $request
      * @param CommandBus $commandBus
      *
      * @throws GeneralException
@@ -153,11 +153,11 @@ class ProductController extends CommandsDomainEventController
             }
             //pass the image along with the path to the upload to the imageDriver for further processing
 
-            $im = $this->imageDriver->up($file, config('innovate.upload_path').DS.'product'.DS.Str::random(32).'.'.$file->guessExtension());
-            $fl_name = Str::random(32).'.'.$prod->guessExtension();
-            $pr = $prod->move(config('innovate.upload_path').DS.'product', $fl_name);
+            $im = $this->imageDriver->up($file, config('innovate.upload_path') . DS . 'product' . DS . Str::random(32) . '.' . $file->guessExtension());
+            $fl_name = Str::random(32) . '.' . $prod->guessExtension();
+            $pr = $prod->move(config('innovate.upload_path') . DS . 'product', $fl_name);
 
-            $im = $this->imageDriver->up($file, config('innovate.upload_path').DS.'product'.DS.Str::random(32).'.'.$file->guessExtension());
+            $im = $this->imageDriver->up($file, config('innovate.upload_path') . DS . 'product' . DS . Str::random(32) . '.' . $file->guessExtension());
 
             $all = $request->all();
             $all['valid_image'] = $im->basename;
@@ -171,7 +171,7 @@ class ProductController extends CommandsDomainEventController
 
     /**
      * @param StoreProductRequest $request
-     * @param CommandBus          $commandBus
+     * @param CommandBus $commandBus
      *
      * @throws GeneralException
      */
@@ -184,7 +184,7 @@ class ProductController extends CommandsDomainEventController
                 throw new GeneralException('There is error in your image file.');
             }
             //pass the image along with the path to the upload to the imageDriver for further processing
-            $im = $this->imageDriver->up($file, config('innovate.upload_path').DS.'product'.DS.Str::random(32).'.'.$file->guessExtension());
+            $im = $this->imageDriver->up($file, config('innovate.upload_path') . DS . 'product' . DS . Str::random(32) . '.' . $file->guessExtension());
             $all = $request->all();
             $all['valid_image'] = $im->basename;
 

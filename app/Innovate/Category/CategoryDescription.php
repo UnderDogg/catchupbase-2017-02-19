@@ -14,7 +14,7 @@ use Innovate\Category\Traits\Relationship\CategoryDescriptionRelationship;
 
 class CategoryDescription extends BaseModel
 {
-    use Translatable,CategoryDescriptionRelationship;
+    use Translatable, CategoryDescriptionRelationship;
 
     protected $table = 'category_description';
 

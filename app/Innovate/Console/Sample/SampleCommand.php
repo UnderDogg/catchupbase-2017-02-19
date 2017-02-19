@@ -24,7 +24,6 @@ class SampleCommand extends Command
     protected $name = 'innovate:version';
 
 
-
     /**
      * The console command description.
      *
@@ -37,9 +36,9 @@ class SampleCommand extends Command
         echo 'Innovate V 0.0.1';
     }
 
-   /* public function handle()
-    {
-
-        $this->comment(PHP_EOL . 'hello from sample'. PHP_EOL);
-    }*/
+    /* public function handle()
+     {
+ 
+         $this->comment(PHP_EOL . 'hello from sample'. PHP_EOL);
+     }*/
 }

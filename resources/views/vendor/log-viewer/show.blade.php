@@ -110,7 +110,8 @@
                             Log info :
 
                             <div class="group-btns pull-right">
-                                <a href="{{ route('log-viewer::logs.download', [$log->date]) }}" class="btn btn-xs btn-success">
+                                <a href="{{ route('log-viewer::logs.download', [$log->date]) }}"
+                                   class="btn btn-xs btn-success">
                                     <i class="fa fa-download"></i> DOWNLOAD
                                 </a>
                                 <a href="#delete-log-modal" class="btn btn-xs btn-danger" data-toggle="modal">
@@ -128,7 +129,7 @@
                                 </thead>
                                 <tbody>
                                 <tr>
-                                    <td>Log entries : </td>
+                                    <td>Log entries :</td>
                                     <td>
                                     <span class="label label-primary">
                                         {{ $entries->total() }}
@@ -213,11 +214,16 @@
                                 <h4 class="modal-title">DELETE LOG FILE</h4>
                             </div>
                             <div class="modal-body">
-                                <p>Are you sure you want to <span class="label label-danger">DELETE</span> this log file <span class="label label-primary">{{ $log->date }}</span> ?</p>
+                                <p>Are you sure you want to <span class="label label-danger">DELETE</span> this log file
+                                    <span class="label label-primary">{{ $log->date }}</span> ?</p>
                             </div>
                             <div class="modal-footer">
-                                <button type="button" class="btn btn-sm btn-default pull-left" data-dismiss="modal">Cancel</button>
-                                <button type="submit" class="btn btn-sm btn-danger" data-loading-text="Loading&hellip;">DELETE FILE</button>
+                                <button type="button" class="btn btn-sm btn-default pull-left" data-dismiss="modal">
+                                    Cancel
+                                </button>
+                                <button type="submit" class="btn btn-sm btn-danger" data-loading-text="Loading&hellip;">
+                                    DELETE FILE
+                                </button>
                             </div>
                         </div>
                     </form>
@@ -232,19 +238,19 @@
     <script>
         $(function () {
             var deleteLogModal = $('div#delete-log-modal'),
-                    deleteLogForm  = $('form#delete-log-form'),
-                    submitBtn      = deleteLogForm.find('button[type=submit]');
+                    deleteLogForm = $('form#delete-log-form'),
+                    submitBtn = deleteLogForm.find('button[type=submit]');
 
-            deleteLogForm.submit(function(event) {
+            deleteLogForm.submit(function (event) {
                 event.preventDefault();
                 submitBtn.button('loading');
 
                 $.ajax({
-                    url:      $(this).attr('action'),
-                    type:     $(this).attr('method'),
+                    url: $(this).attr('action'),
+                    type: $(this).attr('method'),
                     dataType: 'json',
-                    data:     $(this).serialize(),
-                    success: function(data, textStatus, xhr) {
+                    data: $(this).serialize(),
+                    success: function (data, textStatus, xhr) {
                         submitBtn.button('reset');
                         if (data.result === 'success') {
                             deleteLogModal.modal('hide');
@@ -254,7 +260,7 @@
                             alert('OOPS ! This is a lack of coffee exception !')
                         }
                     },
-                    error: function(xhr, textStatus, errorThrown) {
+                    error: function (xhr, textStatus, errorThrown) {
                         alert('AJAX ERROR ! Check the console !')
                         console.error(errorThrown);
                         submitBtn.button('reset');

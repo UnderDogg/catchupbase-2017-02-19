@@ -14,7 +14,7 @@ use Innovate\Api\ApiUser\Traits\Relationship\ApiUserRelationship;
 
 class ApiUser extends Model
 {
-    use ApiUserAttribute,ApiUserRelationship;
+    use ApiUserAttribute, ApiUserRelationship;
 
 
     protected $table = 'api_user';

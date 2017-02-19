@@ -111,7 +111,9 @@
                         </span>
                                 </h5>
                                 <div class="progress">
-                                    <div class="progress-bar level-{{ $level }}" role="progressbar" aria-valuenow="{{ $item['percent'] }}" aria-valuemin="0" aria-valuemax="100" style="width: {{ $item['percent'] }}%">
+                                    <div class="progress-bar level-{{ $level }}" role="progressbar"
+                                         aria-valuenow="{{ $item['percent'] }}" aria-valuemin="0" aria-valuemax="100"
+                                         style="width: {{ $item['percent'] }}%">
                                         {{ $item['count'] }}
                                     </div>
                                 </div>
@@ -127,17 +129,17 @@
 @section('after-scripts-end')
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js"></script>
     <script>
-        Chart.defaults.global.responsive      = true;
+        Chart.defaults.global.responsive = true;
         Chart.defaults.global.scaleFontFamily = "'Source Sans Pro'";
         Chart.defaults.global.animationEasing = "easeOutQuart";
 
-        $(function() {
+        $(function () {
             var data = {!! $reports !!};
 
             new Chart($('#stats-doughnut-chart')[0].getContext('2d'))
-                .Doughnut(data, {
-                    animationEasing : "easeOutQuart"
-                });
+                    .Doughnut(data, {
+                        animationEasing: "easeOutQuart"
+                    });
         });
     </script>
 @stop

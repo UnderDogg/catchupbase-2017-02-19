@@ -39,7 +39,7 @@ class HDPresenter extends BootstrapThreePresenter
             $btnStatus = 'active';
         }
 
-        return $btn = "<a class='button button-xsmall ".$btnStatus."' href='".$url."'>Last >> </a>";
+        return $btn = "<a class='button button-xsmall " . $btnStatus . "' href='" . $url . "'>Last >> </a>";
     }
 
     public function getFirst()
@@ -52,7 +52,7 @@ class HDPresenter extends BootstrapThreePresenter
             $btnStatus = 'active';
         }
 
-        return $btn = "<a class='button button-xsmall ".$btnStatus."'  href='".$url."'> << First </a>";
+        return $btn = "<a class='button button-xsmall " . $btnStatus . "'  href='" . $url . "'> << First </a>";
     }
 
     public function getButtonPre()
@@ -66,7 +66,7 @@ class HDPresenter extends BootstrapThreePresenter
             $btnStatus = 'active';
         }
 
-        return $btn = "<a class='button button-xsmall ".$btnStatus."'  href='".$url."'>< Previous </a>";
+        return $btn = "<a class='button button-xsmall " . $btnStatus . "'  href='" . $url . "'>< Previous </a>";
     }
 
     public function getButtonNext()
@@ -80,6 +80,6 @@ class HDPresenter extends BootstrapThreePresenter
             $btnStatus = 'active';
         }
 
-        return $btn = "<a class='button button-xsmall ".$btnStatus."'  href='".$url."'> Next >  </a>";
+        return $btn = "<a class='button button-xsmall " . $btnStatus . "'  href='" . $url . "'> Next >  </a>";
     }
 }

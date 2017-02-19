@@ -60,7 +60,7 @@ class EloquentUserRepository implements UserContract
      * @param  $per_page
      * @param string $order_by
      * @param string $sort
-     * @param int    $status
+     * @param int $status
      *
      * @return mixed
      */

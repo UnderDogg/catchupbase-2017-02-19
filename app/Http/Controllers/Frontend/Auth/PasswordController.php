@@ -28,9 +28,9 @@ class PasswordController extends Controller
     protected $redirectPath = '/dashboard';
 
     /**
-     * @param Guard          $auth
+     * @param Guard $auth
      * @param PasswordBroker $passwords
-     * @param UserContract   $user
+     * @param UserContract $user
      */
     public function __construct(Guard $auth, PasswordBroker $passwords, UserContract $user)
     {
@@ -68,7 +68,7 @@ class PasswordController extends Controller
 
         if ($user) {
             if ($user->confirmed == 0) {
-                throw new GeneralException('Your account is not confirmed. Please click the confirmation link in your e-mail, or '.'<a href="'.route('account.confirm.resend', $user->id).'">click here</a>'.' to resend the confirmation e-mail.');
+                throw new GeneralException('Your account is not confirmed. Please click the confirmation link in your e-mail, or ' . '<a href="' . route('account.confirm.resend', $user->id) . '">click here</a>' . ' to resend the confirmation e-mail.');
             }
         } else {
             throw new GeneralException('There is no user with that e-mail address.');

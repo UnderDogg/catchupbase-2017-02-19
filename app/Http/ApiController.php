@@ -108,10 +108,10 @@ class ApiController extends CommandsDomainEventController
     {
         $data = array_merge($data, [
             'paginate' => [
-                'total_count'  => $items->total(),
-                'total_page'   => ceil($items->total() / $items->perPage()),
+                'total_count' => $items->total(),
+                'total_page' => ceil($items->total() / $items->perPage()),
                 'current_page' => $items->currentPage(),
-                'limit'        => $items->perPage(),
+                'limit' => $items->perPage(),
             ],
 
         ]);
@@ -128,9 +128,9 @@ class ApiController extends CommandsDomainEventController
     {
         return $this->respond([
             'error' => [
-                'message'     => $message,
+                'message' => $message,
                 'status_code' => $this->getStatusCode(),
-                'error_code'  => $this->getErrorCode(),
+                'error_code' => $this->getErrorCode(),
             ],
         ]);
     }

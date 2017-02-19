@@ -30,11 +30,12 @@
     <div class="box box-info">
         <div class="box-body">
             <div class="pull-left">
-                <a href="{{route('admin.tax.index')}}" class="btn btn-danger btn-xs">{{ trans('strings.cancel_button') }}</a>
+                <a href="{{route('admin.tax.index')}}"
+                   class="btn btn-danger btn-xs">{{ trans('strings.cancel_button') }}</a>
             </div>
 
             <div class="pull-right">
-                <input type="submit" class="btn btn-success btn-xs" value="{{ $buttonText }}" />
+                <input type="submit" class="btn btn-success btn-xs" value="{{ $buttonText }}"/>
             </div>
             <div class="clearfix"></div>
         </div><!-- /.box-body -->

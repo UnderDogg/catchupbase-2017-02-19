@@ -41,7 +41,7 @@
                         </div>
                     </div><!--form control-->
 
-                    <hr />
+                    <hr/>
                     <div class="form-group">
                         {!! Form::label('image', trans('category.image'), ['class' => 'col-lg-2 control-label']) !!}
                         <div class="col-lg-10">
@@ -51,24 +51,25 @@
                     <div class="form-group">
                         {!! Form::label('parent_category', trans('category.parent_category'), ['class' => 'col-lg-2 control-label']) !!}
                         <div class="col-lg-10">
-                                <select id="parent_category" name="parent_category" class="form-control select2" style="width: 100%;">
-                                    <option value="">{!! trans('category.parent_category') !!}</option>
-                                    @if($pageName == 'create')
-                                        @foreach ($categorys as $category)
-                                            @foreach ($category->category_description->category_description_translations as $trans)
+                            <select id="parent_category" name="parent_category" class="form-control select2"
+                                    style="width: 100%;">
+                                <option value="">{!! trans('category.parent_category') !!}</option>
+                                @if($pageName == 'create')
+                                    @foreach ($categorys as $category)
+                                        @foreach ($category->category_description->category_description_translations as $trans)
 
-                                                <option value="{!! $category->id !!}">  {!! $trans->name  !!}</option>
-                                            @endforeach
+                                            <option value="{!! $category->id !!}">  {!! $trans->name  !!}</option>
                                         @endforeach
-                                    @elseif($pageName == 'update')
-                                        @foreach ($categorys as $category_in)
-                                            <option value="{!! $category_in->id !!}" {!!  $category->id  == $category_in->id ? 'selected' : '' !!}>{!! $category_in->category_description->name  !!}</option>
-                                        @endforeach
-                                    @endif
+                                    @endforeach
+                                @elseif($pageName == 'update')
+                                    @foreach ($categorys as $category_in)
+                                        <option value="{!! $category_in->id !!}" {!!  $category->id  == $category_in->id ? 'selected' : '' !!}>{!! $category_in->category_description->name  !!}</option>
+                                    @endforeach
+                                @endif
 
-                                </select>
+                            </select>
 
-                            </div>
+                        </div>
 
 
                     </div><!--form control-->
@@ -94,7 +95,7 @@
                             {!! Form::textarea('description_en', null, ['class' => 'form-control', 'placeholder' => trans('category.description_en')]) !!}
                         </div>
                     </div><!--form control-->
-                    <hr />
+                    <hr/>
                     <div class="form-group">
                         {!! Form::label('name_am', trans('category.name_am'), ['class' => 'col-lg-2 control-label']) !!}
                         <div class="col-lg-10">
@@ -114,18 +115,16 @@
         </div>
 
 
-
-
-
     </div>
     <div class="box box-info">
         <div class="box-body">
             <div class="pull-left">
-                <a href="{{route('admin.category.index')}}" class="btn btn-danger btn-xs">{{ trans('strings.cancel_button') }}</a>
+                <a href="{{route('admin.category.index')}}"
+                   class="btn btn-danger btn-xs">{{ trans('strings.cancel_button') }}</a>
             </div>
 
             <div class="pull-right">
-                <input id="btn-save" type="submit" class="btn btn-success btn-xs" value="{{ $buttonText }}" />
+                <input id="btn-save" type="submit" class="btn btn-success btn-xs" value="{{ $buttonText }}"/>
 
             </div>
             <div class="clearfix"></div>

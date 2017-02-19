@@ -18,14 +18,14 @@ class ProductTransformer extends Transformer
     public function transform($product)
     {
         return [
-            'id'                => $product['id'],
-            'SKU'               => $product['sku'],
-            'Name'              => $product['name'],
+            'id' => $product['id'],
+            'SKU' => $product['sku'],
+            'Name' => $product['name'],
             'Short Description' => $product['short_description'],
-            'Price'             => $product['price'],
-            'Previous Price'    => $product['previous_price'],
-            'Currency'          => $product['currency'],
-            'Image'             => $product['img_medium'],
+            'Price' => $product['price'],
+            'Previous Price' => $product['previous_price'],
+            'Currency' => $product['currency'],
+            'Image' => $product['img_medium'],
         ];
     }
 }

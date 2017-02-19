@@ -36,19 +36,19 @@
                     </thead>
                     <tbody>
                     @if($taxs->count() )
-                    @foreach ($taxs as $tax)
-                        <tr>
-                            <td>{!! $tax->id !!}</td>
-                            <td>{!! $tax->name !!}</td>
-                            <td>{!! $tax->rate !!}</td>
-                            <td class="visible-lg">{!! $tax->created_at->diffForHumans() !!}</td>
-                            <td class="visible-lg">{!! $tax->updated_at->diffForHumans() !!}</td>
-                            <td>{!! $tax->getActionButtonsAttribute() !!}</td>
-                        </tr>
-                    @endforeach
-                        @else
+                        @foreach ($taxs as $tax)
+                            <tr>
+                                <td>{!! $tax->id !!}</td>
+                                <td>{!! $tax->name !!}</td>
+                                <td>{!! $tax->rate !!}</td>
+                                <td class="visible-lg">{!! $tax->created_at->diffForHumans() !!}</td>
+                                <td class="visible-lg">{!! $tax->updated_at->diffForHumans() !!}</td>
+                                <td>{!! $tax->getActionButtonsAttribute() !!}</td>
+                            </tr>
+                        @endforeach
+                    @else
                         <td colspan="9">{{ trans('tax.no_tax') }}</td>
-                        @endif
+                    @endif
                     </tbody>
                 </table>
             </div>

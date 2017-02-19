@@ -29,8 +29,10 @@
             <div>
                 <!-- Nav tabs -->
                 <ul class="nav nav-tabs" role="tablist">
-                    <li role="presentation" class="active"><a href="#groups" aria-controls="groups" role="tab" data-toggle="tab">Groups</a></li>
-                    <li role="presentation"><a href="#permissions" aria-controls="permissions" role="tab" data-toggle="tab">Permissions</a></li>
+                    <li role="presentation" class="active"><a href="#groups" aria-controls="groups" role="tab"
+                                                              data-toggle="tab">Groups</a></li>
+                    <li role="presentation"><a href="#permissions" aria-controls="permissions" role="tab"
+                                               data-toggle="tab">Permissions</a></li>
                 </ul>
 
                 <!-- Tab panes -->
@@ -40,20 +42,25 @@
                         <div class="row">
                             <div class="col-lg-6">
                                 <div class="alert alert-info">
-                                    <i class="fa fa-info-circle"></i> This section allows you to organize your permissions into groups to stay organized. Regardless of the group, the permissions are still individually assigned to each role.
+                                    <i class="fa fa-info-circle"></i> This section allows you to organize your
+                                    permissions into groups to stay organized. Regardless of the group, the permissions
+                                    are still individually assigned to each role.
                                 </div><!--alert info-->
 
                                 <div class="dd permission-hierarchy">
                                     <ol class="dd-list">
                                         @foreach ($groups as $group)
                                             <li class="dd-item" data-id="{!! $group->id !!}">
-                                                <div class="dd-handle">{!! $group->name !!} <span class="pull-right">{!! $group->permissions->count() !!} permissions</span></div>
+                                                <div class="dd-handle">{!! $group->name !!} <span class="pull-right">{!! $group->permissions->count() !!}
+                                                        permissions</span></div>
 
                                                 @if ($group->children->count())
                                                     <ol class="dd-list">
                                                         @foreach($group->children as $child)
                                                             <li class="dd-item" data-id="{!! $child->id !!}">
-                                                                <div class="dd-handle">{!! $child->name !!} <span class="pull-right">{!! $child->permissions->count() !!} permissions</span></div>
+                                                                <div class="dd-handle">{!! $child->name !!} <span
+                                                                            class="pull-right">{!! $child->permissions->count() !!}
+                                                                        permissions</span></div>
                                                             </li>
                                                         @endforeach
                                                     </ol>
@@ -68,7 +75,9 @@
 
                             <div class="col-lg-6">
                                 <div class="alert alert-info">
-                                    <i class="fa fa-info-circle"></i> If you performed operations in the hierarchy section without refreshing this page, you will need to refresh to reflect the changes here.
+                                    <i class="fa fa-info-circle"></i> If you performed operations in the hierarchy
+                                    section without refreshing this page, you will need to refresh to reflect the
+                                    changes here.
                                 </div><!--alert info-->
 
                                 <div class="table-responsive">
@@ -208,26 +217,26 @@
     {!! HTML::script('js/backend/plugin/nestable/jquery.nestable.js') !!}
 
     <script>
-        $(function() {
+        $(function () {
             var hierarchy = $('.permission-hierarchy');
-            hierarchy.nestable({maxDepth:2});
+            hierarchy.nestable({maxDepth: 2});
 
-            hierarchy.on('change', function() {
+            hierarchy.on('change', function () {
                 @permission('sort-permission-groups')
                     $.ajax({
-                        url : "{!! route('admin.access.roles.groups.update-sort') !!}",
-                        type: "post",
-                        data : {data:hierarchy.nestable('serialize')},
-                        success: function(data) {
-                            if (data.status == "OK")
-                                toastr.success("Hierarchy successfully saved.");
-                            else
-                                toastr.error("An unknown error occurred.");
-                        },
-                        error: function (jqXHR, textStatus, errorThrown) {
-                            toastr.error("An unknown error occurred: " + errorThrown);
-                        }
-                    });
+                    url: "{!! route('admin.access.roles.groups.update-sort') !!}",
+                    type: "post",
+                    data: {data: hierarchy.nestable('serialize')},
+                    success: function (data) {
+                        if (data.status == "OK")
+                            toastr.success("Hierarchy successfully saved.");
+                        else
+                            toastr.error("An unknown error occurred.");
+                    },
+                    error: function (jqXHR, textStatus, errorThrown) {
+                        toastr.error("An unknown error occurred: " + errorThrown);
+                    }
+                });
                 @else
                     toastr.error("You do not have permission to do that.");
                 @endauth

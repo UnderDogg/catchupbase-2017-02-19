@@ -19,7 +19,7 @@ class EventServiceProvider extends ServiceProvider
         /*
          * Frontend Events
          */
-        \App\Events\Frontend\Auth\UserLoggedIn::class  => [
+        \App\Events\Frontend\Auth\UserLoggedIn::class => [
             \App\Listeners\Frontend\Auth\UserLoggedInHandler::class,
         ],
         \App\Events\Frontend\Auth\UserLoggedOut::class => [

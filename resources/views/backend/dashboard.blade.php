@@ -2,7 +2,7 @@
 
 @section('page-header')
     <h1>
-      INNOVATE E-commerce Back end
+        INNOVATE E-commerce Back end
         <small>{{ trans('strings.backend.dashboard_title') }}</small>
     </h1>
 @endsection
@@ -24,7 +24,8 @@
         <div class="box-header with-border">
             <h3 class="box-title">{{ trans('activity.most_recent_activity') }}</h3>
             <div class="box-tools pull-right">
-                <a href=" {{ route('admin.activity_log.flush') }}" class="btn btn-xs btn-danger">{{ trans('activity.flush_log') }}</a>
+                <a href=" {{ route('admin.activity_log.flush') }}"
+                   class="btn btn-xs btn-danger">{{ trans('activity.flush_log') }}</a>
                 <button class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
             </div>
         </div><!-- /.box-header -->
@@ -51,13 +52,17 @@
                                 <td>{!! $activitie->ip_address !!}</td>
                                 <td>   @if (isset($activitie->user->name) )
                                         {!! $activitie->user->name !!}
-                                        @else
+                                    @else
                                         Guest
-                                           @endif
-                                        </td>
+                                    @endif
+                                </td>
                                 <td class="visible-lg">{!! $activitie->created_at->diffForHumans() !!}</td>
                                 <td class="visible-lg">{!! $activitie->updated_at->diffForHumans() !!}</td>
-                                <td> <a href=" {{ route('admin.activity_log.destroy', $activitie->id) }}" data-method="delete" class="btn btn-xs btn-danger"><i class="fa fa-trash" data-toggle="tooltip" data-placement="top" title="{!! trans('crud.delete_button') !!} "></i></a>
+                                <td><a href=" {{ route('admin.activity_log.destroy', $activitie->id) }}"
+                                       data-method="delete" class="btn btn-xs btn-danger"><i class="fa fa-trash"
+                                                                                             data-toggle="tooltip"
+                                                                                             data-placement="top"
+                                                                                             title="{!! trans('crud.delete_button') !!} "></i></a>
                                 </td>
                             </tr>
                         @endforeach

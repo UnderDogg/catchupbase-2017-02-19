@@ -125,7 +125,7 @@ class AccessServiceProvider extends ServiceProvider
         });
 
         Blade::directive('needsroles', function ($roles) {
-            return '<?php if (access()->hasRoles('.$roles.', true)): ?>';
+            return '<?php if (access()->hasRoles(' . $roles . ', true)): ?>';
         });
 
         /*
@@ -144,7 +144,7 @@ class AccessServiceProvider extends ServiceProvider
         });
 
         Blade::directive('needspermissions', function ($permissions) {
-            return '<?php if (access()->canMultiple('.$permissions.', true)): ?>';
+            return '<?php if (access()->canMultiple(' . $permissions . ', true)): ?>';
         });
 
         /*

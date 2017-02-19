@@ -27,7 +27,7 @@ class StorePermissionRequest extends Request
     public function rules()
     {
         return [
-            'name'         => 'required',
+            'name' => 'required',
             'display_name' => 'required',
         ];
     }

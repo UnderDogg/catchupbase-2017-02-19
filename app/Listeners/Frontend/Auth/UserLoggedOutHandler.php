@@ -30,6 +30,6 @@ class UserLoggedOutHandler implements ShouldQueue
      */
     public function handle(UserLoggedOut $event)
     {
-        \Log::info('User Logged Out: '.$event->user->name);
+        \Log::info('User Logged Out: ' . $event->user->name);
     }
 }

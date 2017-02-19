@@ -33,15 +33,15 @@ class Kernel extends HttpKernel
         /*
          * Default laravel route middleware
          */
-        'auth'       => \App\Http\Middleware\Authenticate::class,
+        'auth' => \App\Http\Middleware\Authenticate::class,
         'auth.basic' => \Illuminate\Auth\Middleware\AuthenticateWithBasicAuth::class,
-        'guest'      => \App\Http\Middleware\RedirectIfAuthenticated::class,
+        'guest' => \App\Http\Middleware\RedirectIfAuthenticated::class,
 
 
         /*
          * Access Middleware
          */
-        'access.routeNeedsRole'       => \App\Http\Middleware\RouteNeedsRole::class,
+        'access.routeNeedsRole' => \App\Http\Middleware\RouteNeedsRole::class,
         'access.routeNeedsPermission' => \App\Http\Middleware\RouteNeedsPermission::class,
 
         /*
@@ -52,7 +52,7 @@ class Kernel extends HttpKernel
         /*
          * Access Middleware
          */
-        'access.routeNeedsRole'       => \App\Http\Middleware\RouteNeedsRole::class,
+        'access.routeNeedsRole' => \App\Http\Middleware\RouteNeedsRole::class,
         'access.routeNeedsPermission' => \App\Http\Middleware\RouteNeedsPermission::class,
     ];
 }

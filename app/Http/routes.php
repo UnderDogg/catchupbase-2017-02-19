@@ -10,7 +10,7 @@
  * Switch between the included languages.
  */
 $router->group(['namespace' => 'Language'], function () use ($router) {
-    require __DIR__.'/Routes/Language/Lang.php';
+    require __DIR__ . '/Routes/Language/Lang.php';
 });
 
 /*
@@ -18,8 +18,8 @@ $router->group(['namespace' => 'Language'], function () use ($router) {
  * Namespaces indicate folder structure
  */
 $router->group(['namespace' => 'Frontend'], function () use ($router) {
-    require __DIR__.'/Routes/Frontend/Frontend.php';
-    require __DIR__.'/Routes/Frontend/Access.php';
+    require __DIR__ . '/Routes/Frontend/Frontend.php';
+    require __DIR__ . '/Routes/Frontend/Access.php';
 });
 
 /*
@@ -34,10 +34,10 @@ $router->group(['namespace' => 'Backend'], function () use ($router) {
          * Note: Administrator has all permissions so you do not have to specify the administrator role everywhere.
          */
         $router->group(['middleware' => 'access.routeNeedsPermission:view-backend'], function () use ($router) {
-            require __DIR__.'/Routes/Backend/Dashboard.php';
-            require __DIR__.'/Routes/Backend/Access.php';
-            require __DIR__.'/Routes/Backend/LogViewer.php';
-            require __DIR__.'/Routes/Backend/Innovate.php';
+            require __DIR__ . '/Routes/Backend/Dashboard.php';
+            require __DIR__ . '/Routes/Backend/Access.php';
+            require __DIR__ . '/Routes/Backend/LogViewer.php';
+            require __DIR__ . '/Routes/Backend/Innovate.php';
         });
     });
 });
