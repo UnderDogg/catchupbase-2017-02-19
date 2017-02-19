@@ -36,7 +36,7 @@
     "caffeinated/flash": "^2.1",
     "caffeinated/menus": "^2.3",
     "caffeinated/modules": "^3.2",
-    "caffeinated/themes": "^2.0",
+    "teepluss/theme": "^2.0",
     "codesleeve/laravel-stapler": "^1.0",
     "creativeorange/gravatar": "^1.0",
     "cviebrock/eloquent-sluggable": "4.0",

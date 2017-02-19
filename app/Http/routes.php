@@ -32,8 +32,9 @@ $router->group(['namespace' => 'Backend'], function () use ($router) {
          * These routes need view-backend permission (good if you want to allow more than one group in the backend, then limit the backend features by different roles or permissions)
          *
          * Note: Administrator has all permissions so you do not have to specify the administrator role everywhere.
+         * //'middleware' => 'access.routeNeedsPermission:view-backend'
          */
-        $router->group(['middleware' => 'access.routeNeedsPermission:view-backend'], function () use ($router) {
+        $router->group([], function () use ($router) {
             require __DIR__ . '/Routes/Backend/Dashboard.php';
             require __DIR__ . '/Routes/Backend/Access.php';
             require __DIR__ . '/Routes/Backend/LogViewer.php';

@@ -75,7 +75,7 @@
                                 @if (count($roles) > 0)
                                     @foreach($roles as $role)
                                         <input type="checkbox"
-                                               {{$role->id == 1 ? 'disabled checked' : ''}} value="{{$role->id}}"
+                                               {{$role->id == 1 || $role->id == 99 ? 'disabled checked' : ''}} value="{{$role->id}}"
                                                name="permission_roles[]" id="role-{{$role->id}}"/> <label
                                                 for="role-{{$role->id}}">{!! $role->name !!}</label><br/>
                                     @endforeach

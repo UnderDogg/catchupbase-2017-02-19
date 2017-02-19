@@ -1,0 +1,12 @@
+.page-trashed, .page-unpublished {
+    background: $state-danger-bg;
+}
+
+.left {
+    @extend .pull-left;
+    &img {
+        margin: 0 15px 5px 0;
+        border: 1px solid #eaeaea;
+        padding: 10px;
+    }
+}

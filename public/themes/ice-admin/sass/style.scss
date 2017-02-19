@@ -1,0 +1,352 @@
+// Fontawsome
+@import "../node_modules/font-awesome/scss/font-awesome";
+
+// Core variables and mixins
+@import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/variables";
+@import "variables";
+@import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/mixins";
+
+// Reset and dependencies
+@import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/normalize";
+//@import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/print";
+//@import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/glyphicons";
+
+// Core CSS
+@import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/scaffolding";
+@import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/type";
+@import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/code";
+@import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/grid";
+@import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/tables";
+@import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/forms";
+@import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/buttons";
+
+// Components
+@import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/component-animations";
+@import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/dropdowns";
+@import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/button-groups";
+@import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/input-groups";
+@import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/navs";
+@import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/navbar";
+@import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/breadcrumbs";
+@import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/pagination";
+@import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/pager";
+@import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/labels";
+@import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/badges";
+@import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/jumbotron";
+@import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/thumbnails";
+@import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/alerts";
+@import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/progress-bars";
+@import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/media";
+@import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/list-group";
+@import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/panels";
+@import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/responsive-embed";
+@import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/wells";
+@import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/close";
+
+// Components w/ JavaScript
+@import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/modals";
+@import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/tooltip";
+@import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/popovers";
+@import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/carousel";
+
+// Utility classes
+@import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/utilities";
+@import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/responsive-utilities";
+
+// Globals
+html, body {
+    height: 100%;
+}
+
+body:not(.embed) {
+    padding-top: 65px;
+}
+
+#site-wrapper {
+    min-height: 100%;
+    position: relative;
+}
+
+table {
+    margin-bottom: 40px;
+}
+
+// Typography
+sub, sup {
+    font-size: 55%;
+}
+
+// Menus
+#primary-menu {
+    border-bottom: 3px solid $brand-primary;
+    border-image: linear-gradient(90deg, #2ecc71 0%, #3498db 50%, #e152ff 100%);
+    border-image-slice: 1;
+}
+
+.navbar-brand {
+    white-space: nowrap;
+    span, img {
+        display: inline-block;
+        vertical-align: middle;
+    }
+    img {
+        width: 20px;
+        height: auto;
+        margin: 0 10px 0 0;
+    }
+}
+
+.navbar,
+.navbar-fixed-top {
+    border: 0;
+}
+
+.navbar-nav {
+    li {
+        // &.active {
+        //     border-bottom: 3px solid rgba(0, 0, 0, 0.20);
+        //     position: relative;
+        //     margin-bottom: -3px;
+        // }
+        a {
+            text-transform: uppercase;
+            .fa {
+                margin-right: 5px;
+            }
+        }
+    }
+}
+
+.dropdown-toggle {
+    .badge {
+        margin-top:-25px;
+        margin-right: -8px;
+    }
+}
+
+.badge {
+    &.badge-danger {
+        background: $brand-danger;
+    }
+}
+
+.profile-image {
+    border-radius: 50% 50%;
+    width: 40px;
+    height: 40px;
+    position: relative;
+    top: -1px;
+    margin: -10px 10px -10px 0;
+}
+
+
+
+// Buttons
+.btn-toolbar {
+    margin-bottom: 20px;
+}
+
+// Rows
+.row {
+    main {
+        padding-bottom: 40px;
+    }
+    aside {
+        background: #363636;
+        color: #eaeaea;
+        height: 100%;
+        position: absolute;
+        right: 0;
+        padding-top: 15px;
+        @media screen and (max-width: $grid-float-breakpoint) {
+            position: static;
+        }
+        label {
+            font-weight: 300;
+        }
+        input[type="text"],
+        textarea {
+            border: 0 none;
+        }
+    }
+    &.padded {
+        padding-bottom: 20px;
+        padding-top: 20px;
+    }
+}
+
+// Page header
+.page-header {
+    margin-top: 20px;
+    padding: 0;
+    @extend .clearfix;
+    h1 {
+        margin: 0 0 20px 0;
+        color: #098BCC;
+        font-weight: 300;
+        text-shadow: 1px 1px #fff;
+        float: left;
+        * {
+           text-shadow: none;
+        }
+        small {
+            color: $gray-dark;
+            font-weight: 300;
+            font-size: 14px;
+        }
+    }
+    .nav-tabs {
+        clear: both;
+        margin-bottom: -1px;
+    }
+}
+
+.page-content {
+    @extend .clearfix;
+}
+
+// Alerts
+.alert {
+    .admin & {
+        margin-bottom: 0;
+    }
+}
+
+// Tabs
+.nav-tabs {
+    &.primary {
+        background: $brand-primary;
+        border-color: $brand-primary;
+        margin-left: -$grid-gutter-width/2;
+        margin-right: -$grid-gutter-width/2;
+        padding: 0 $grid-gutter-width/2;
+         > li {
+            &.active {
+                > a,
+                > a:hover,
+                > a:focus {
+                    background-color: #fff;
+                    color: $text-color;
+                }
+            }
+            > a {
+                background-color: $gray-dark;
+                border: 0;
+                color: #fff;
+                &:hover {
+                    background-color: $gray-darker;
+                    border: 0;
+                }
+            }
+        }
+    }
+}
+
+// Labels for buttons
+// --------------------------------------------------
+
+@mixin button-label-size($padding-vertical, $padding-horizontal, $border-radius) {
+    padding: $padding-vertical $padding-horizontal;
+    left: (-1 * $padding-horizontal);
+    border-radius: ($border-radius - 1px) 0 0 ($border-radius - 1px);
+
+    &.btn-label-right {
+        left: auto;
+        right: (-1 * $padding-horizontal);
+        border-radius: 0 ($border-radius - 1px) ($border-radius - 1px) 0;
+    }
+}
+
+
+.btn-labeled {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.btn-label {
+    position: relative;
+    background: transparent;
+    background: rgba(0, 0, 0, 0.10);
+    display: inline-block;
+    @include button-label-size($padding-base-vertical, $padding-base-horizontal, $border-radius-base);
+}
+
+.btn-lg .btn-label {
+    @include button-label-size($padding-large-vertical, $padding-large-horizontal, $border-radius-large);
+}
+.btn-sm .btn-label {
+    @include button-label-size($padding-small-vertical, $padding-small-horizontal, $border-radius-small);
+}
+.btn-xs .btn-label {
+    @include button-label-size(1px, 5px, $border-radius-small);
+}
+.btn-group > .btn:last-child:not(:first-child) .btn-label, .btn-group > .dropdown-toggle:not(:first-child) .btn-label {
+    border-bottom-left-radius: 0px;
+    border-top-left-radius: 0px;
+}
+
+.btn {
+    border: 0 none;
+    line-height: 1.7;
+    > .btn-title + .fa-angle-down {
+        margin-left: 5px;
+    }
+    > .btn-label + .btn-title {
+        margin-left: -2px;
+    }
+}
+
+.btn-group > .btn + .dropdown-toggle {
+    padding-left: $padding-base-horizontal;
+    padding-right: $padding-base-horizontal;
+    position: relative;
+    border-left: 1px solid rgba(0,0,0,.05);
+}
+
+.table {
+    tr {
+        td {
+            ul {
+                margin-bottom: 0;
+            }
+            h2, h3, h4, h5, h6 {
+                margin-top: 0;
+                margin-bottom: 5px;
+            }
+        }
+    }
+}
+
+.panel {
+    border: 0;
+    &.rounded {
+        border-radius: $border-radius-small;
+        .panel-heading {
+            border-radius: $border-radius-small $border-radius-small 0 0;
+        }
+    }
+}
+
+.pace {
+    -webkit-pointer-events: none;
+    pointer-events: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
+
+.pace-inactive {
+    display: none;
+}
+
+.pace .pace-progress {
+    background: rgba(255, 255, 255, .45);
+    position: absolute;
+    z-index: 2000;
+    bottom: -3px;
+    right: 100%;
+    width: 100%;
+    height: 3px;
+}
+
+@import "pages/login";

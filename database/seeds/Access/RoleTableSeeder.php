@@ -24,7 +24,7 @@ class RoleTableSeeder extends Seeder
         //Create admin role, id of 1
         $role_model = config('access.role');
         $admin = new $role_model();
-        $admin->id = 99;
+        $admin->id = 1;
         $admin->name = 'Administrator';
         $admin->all = true;
         $admin->sort = 1;

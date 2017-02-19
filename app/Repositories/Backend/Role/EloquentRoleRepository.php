@@ -124,11 +124,11 @@ class EloquentRoleRepository implements RoleRepositoryContract
         $role = $this->findOrThrowException($id);
 
         //See if the role has all access, administrator always has all access
-        if ($role->id == 1) {
-            $all = true;
-        } else {
+        //if ($role->id == 1) {
+            //$all = true;
+        //} else {
             $all = $input['associated-permissions'] == 'all' ? true : false;
-        }
+        //}
 
         //This config is only required if all is false
         if (!$all) {
@@ -182,7 +182,7 @@ class EloquentRoleRepository implements RoleRepositoryContract
     public function destroy($id)
     {
         //Would be stupid to delete the administrator role
-        if ($id == 1) { //id is 1 because of the seeder
+        if ($id == 1 || $id == 99) { //id is 1 because of the seeder
             throw new GeneralException('You can not delete the Administrator role.');
         }
 

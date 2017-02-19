@@ -17,8 +17,16 @@ class FrontendController extends Controller
     public function index()
     {
         Activity::log('User Arrived At the home page');
+        $theme = Theme::uses('default')->layout('default');
 
-        return Theme::view('frontend.index');
+        $view = array(
+            'name' => 'Teepluss'
+        );
+
+
+        return $theme->of('frontend.index', $view)->render();
+
+        //return Theme::view('frontend.index');
     }
 
     /**

@@ -19,7 +19,7 @@ class RouteNeedsRole
     public function handle($request, Closure $next, $role)
     {
         if (!access()->hasRole($role)) {
-            return redirect('/')->withFlashDanger('You do not have access to do that.');
+            return redirect('/')->withFlashDanger('You do not have access ('.$role.') to do that.');
         }
 
         return $next($request);

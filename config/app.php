@@ -190,7 +190,8 @@ return [
         Spatie\Activitylog\ActivitylogServiceProvider::class,
         Spatie\UrlSigner\Laravel\UrlSignerServiceProvider::class,
         Intervention\Image\ImageServiceProvider::class,
-        Caffeinated\Themes\ThemesServiceProvider::class,
+        //Caffeinated\Themes\ThemesServiceProvider::class,
+        Teepluss\Theme\ThemeServiceProvider::class,
         Spatie\Backup\BackupServiceProvider::class,
         Gloudemans\Shoppingcart\ShoppingcartServiceProvider::class,
         //Spiritix\LadaCache\LadaCacheServiceProvider::class,
@@ -288,7 +289,8 @@ return [
         'Cart' => Gloudemans\Shoppingcart\Facades\Cart::class,
         //'Demo' 		=> Mikimaine\Demo\DemoFacade::class,
         'Module' => Caffeinated\Modules\Facades\Module::class,
-        'Theme' => Caffeinated\Themes\Facades\Theme::class,
+        //'Theme' => Caffeinated\Themes\Facades\Theme::class,
+        'Theme' => Teepluss\Theme\Facades\Theme::class,
 
         'Component' => Caffeinated\Themes\Facades\Component::class,
 
